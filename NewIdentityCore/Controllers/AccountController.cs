@@ -82,7 +82,6 @@ namespace NewIdentityCore.Controllers
             if (ModelState.IsValid)
             {
                 var result = await signInManager.PasswordSignInAsync(loginViewModel.Email, loginViewModel.Password, loginViewModel.RememberMe, false);
-                signInManager.cl
 
                 if (result.Succeeded)
                 {
