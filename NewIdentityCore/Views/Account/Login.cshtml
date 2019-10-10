@@ -1,0 +1,125 @@
+﻿@model NewIdentityCore.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"] - NewIdentityCore</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="../images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <environment include="Development">       
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/css/animsition.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/css/material-design-iconic-font.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/css/animate.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/css/hamburgers.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/css/animsition.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/css/select2.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/css/daterangepicker.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="~/css/util.css">
+        <link rel="stylesheet" type="text/css" href="~/css/main.css">
+        <!--===============================================================================================-->
+    </environment>
+    <environment exclude="Development">      
+        <link rel="stylesheet" href="~/css/bundle.min.css" />        
+    </environment>
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('../../images/icons/bg-01.jpg');">
+            <div class="wrap-login100">
+                <form asp-action="Login" class="login100-form validate-form">
+                    <span class="login100-form-logo">
+                        <i class="zmdi zmdi-landscape"></i>
+                    </span>
+
+                    <span class="login100-form-title p-b-34 p-t-27">
+                        Log in
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-val="true"  data-validate="Enter User Name">
+                        <input  type="Email" id="Email" name="Email" class="input100" placeholder="Username" />
+                        <span for="Email" class="focus-input100" data-placeholder="&#xf207;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter password">
+                        <input type="Password" id="Password" name="Password" class="input100" placeholder="Password" />
+                        <span for="Password" class="focus-input100" data-placeholder="&#xf191;"></span>
+                    </div>
+
+                    <div class="contact100-form-checkbox">                        
+                        <input asp-for="RememberMe" type="checkbox" class="input-checkbox100" >
+                        <label for="RememberMe" class="label-checkbox100">
+                            Remember me
+                        </label>
+                    </div>
+                    <div asp-validation-summary="All" class="txtcolor"></div>
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="submit">
+                            Login
+                        </button>
+                    </div>
+
+                    <div class="p-t-90">
+                        <a class="txt1" href="#">
+                            Forgot Password?
+                        </a>
+                        <a asp-area="" class="txtright" asp-controller="Account" asp-action="Register">Register</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+    <environment include="Development">
+        <!--===============================================================================================-->
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <!--===============================================================================================-->
+        <script src="~/js/animsition.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/js/popper.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>        
+        <!--===============================================================================================-->
+        <script src="~/js/select2.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/js/moment.js"></script>
+        <script src="~/js/daterangepicker.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/js/countdowntime.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/js/main.js"></script>
+    </environment>
+    <environment exclude="Development">        
+        <script src="~/app/bundle.min.js"></script>
+    </environment>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+
+</body>
+</html>
+
+

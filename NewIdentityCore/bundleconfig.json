@@ -1,0 +1,49 @@
+[
+  {
+    "outputFileName": "wwwroot/css/bundle.css",
+    "inputFiles": [
+      "wwwroot/css/site.css",
+      "wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "wwwroot/css/site.css",
+
+      "wwwroot/css/animsition.css",
+
+      "wwwroot/css/material-design-iconic-font.css",
+
+      "wwwroot/css/animate.css",
+
+      "wwwroot/css/hamburgers.css",
+
+      "wwwroot/css/animsition.css",
+
+      "wwwroot/css/select2.css",
+
+      "wwwroot/css/daterangepicker.css",
+
+      "wwwroot/css/util.css",
+      "wwwroot/css/main.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/app/bundle.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery/dist/jquery.js",
+      "wwwroot/lib/jquery-validate/jquery.validate.js",
+      "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "wwwroot/js/animsition.min.js",
+      "wwwroot/js/popper.js",
+      "wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "wwwroot/js/site.js",      
+      "wwwroot/js/select2.min.js",
+      "wwwroot/js/moment.min.js",
+      "wwwroot/js/daterangepicker.js",
+      "wwwroot/js/countdowntime.js",
+      "wwwroot/js/main.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]
